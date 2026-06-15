@@ -955,31 +955,45 @@ section {
     font-size: 14px;
   }
 
-  /* Expérience — date sous le titre */
+  /* Expérience — date en haut à droite */
   .exp-header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: stretch;
     padding: 0.7rem 1rem;
   }
 
+  .exp-header-left {
+    padding: 0.4rem 0;
+  }
+
   .exp-header-right {
-    flex-direction: row;
-    align-items: center;
-    padding: 0 0 0.3rem 0;
-    gap: 0.5rem;
-    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: space-between;
+    padding: 0.4rem 0;
+    gap: 0.4rem;
   }
 
   .exp-date {
     width: auto;
     font-size: 11px;
+    white-space: nowrap;
   }
 
-  /* Projets — filtres en 2 colonnes */
+  /* Projets — filtres en 2 colonnes, dernier centré */
   .proj-filters {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .proj-filter {
+    width: 100%;
+  }
+
+  .proj-filter:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 0.5rem);
+    margin: 0 auto;
   }
 
   /* Logiciels — 2 colonnes */
