@@ -944,42 +944,50 @@ section {
 
   .hero-text h1 {
     font-size: 24px;
+    text-align: center;
   }
 
   .hero-text h2 {
     font-size: 16px;
+    text-align: center;
   }
 
   .hero-text p {
-    text-align: left;
+    text-align: justify;
     font-size: 14px;
   }
 
   /* Expérience — date en haut à droite */
   .exp-header {
-    flex-direction: row;
-    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 0.7rem 1rem;
+    gap: 0.1rem;
   }
 
   .exp-header-left {
-    padding: 0.4rem 0;
+    padding: 0;
+    order: 2;
   }
 
   .exp-header-right {
-    flex-direction: column;
-    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 0.5rem;
+    order: 1;
+    width: 100%;
     justify-content: space-between;
-    padding: 0.4rem 0;
-    gap: 0.4rem;
   }
 
   .exp-date {
-    width: auto;
     font-size: 11px;
-    white-space: nowrap;
+    width: auto;
+    text-align: center;
   }
-
+  
   /* Projets — filtres en 2 colonnes, dernier centré */
   .proj-filters {
     display: grid;
